@@ -90,7 +90,7 @@ function App() {
   useEffect(() => {
     fetch("https://taher2552.github.io/quiz_data/quiz_questions")
       .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataRecieve", payload: data }))
+      .then((data) => dispatch({ type: "dataRecieve", payload: data.questions }))
       .catch((err) => dispatch({ type: "dataFailed" }));
   }, []);
 
